@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class createTable {
+public class CreateTable {
     public static void createTable(Connection connection) throws SQLException {
         String sqlDrop = "DROP TABLE IF EXISTS employees";
         String sqlCreate = "CREATE TABLE employees(id INTEGER PRIMARY KEY,"

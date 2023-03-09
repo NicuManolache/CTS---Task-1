@@ -1,11 +1,13 @@
 package sql.acs.ase.ro.classes;
 
+import sql.acs.ase.ro.interfaces.ValueInserter;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class insertData {
+public class InsertData implements ValueInserter {
     public static void insertData(Connection connection) throws SQLException {
         String sqlInsert = "INSERT INTO employees VALUES(1, 'Popescu Ion', 'Bucharest', 4000)";
         Statement statement = connection.createStatement();

@@ -1,11 +1,13 @@
 package sql.acs.ase.ro.classes;
 
+import sql.acs.ase.ro.interfaces.ValueReader;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class readData {
+public class ReadData implements ValueReader {
     public static void readData(Connection connection) throws SQLException, SQLException {
         String sqlSelect = "SELECT * FROM employees";
         Statement statement = connection.createStatement();
@@ -24,3 +26,6 @@ public class readData {
         statement.close();
     }
 }
+
+
+
